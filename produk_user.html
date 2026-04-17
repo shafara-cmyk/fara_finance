@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Produk - Fara Finance (User)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="produk-body">
+  <header class="produk-header">
+    <h1>Daftar Produk Jajanan Manis</h1>
+    <nav>
+      <ul>
+        <li><a href="dashboard_user.html">Dasbor</a></li>
+        <li><a href="#" onclick="lihatKeranjang()">Keranjang 🛒</a></li>
+        <li><a href="index.html">Keluar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="produk-main">
+    <section class="produk-list">
+      <!-- Brownies -->
+      <div class="produk-card">
+        <img src="images/brownies.jpg" alt="Brownies">
+        <h3>Brownies</h3>
+        <p>Brownies coklat lembut dengan topping premium.</p>
+        <p>Harga: Rp 25.000</p>
+        <button onclick="tambahKeranjang('Brownies',25000)">Keranjang</button>
+        <button onclick="beliProduk('Brownies',25000)">Beli</button>
+      </div>
+
+      <!-- Cookies -->
+      <div class="produk-card">
+        <img src="images/cookies.jpg" alt="Cookies">
+        <h3>Cookies</h3>
+        <p>Kue kering manis dengan dekorasi lucu.</p>
+        <p>Harga: Rp 20.000</p>
+        <button onclick="tambahKeranjang('Cookies',20000)">Keranjang</button>
+        <button onclick="beliProduk('Cookies',20000)">Beli</button>
+      </div>
+
+      <!-- Cromboloni -->
+      <div class="produk-card">
+        <img src="images/cromboloni.jpg" alt="Cromboloni">
+        <h3>Cromboloni</h3>
+        <p>Pastry isi krim dengan topping warna-warni.</p>
+        <p>Harga: Rp 30.000</p>
+        <button onclick="tambahKeranjang('Cromboloni',30000)">Keranjang</button>
+        <button onclick="beliProduk('Cromboloni',30000)">Beli</button>
+      </div>
+
+      <!-- Cupcake Chocolate -->
+      <div class="produk-card">
+        <img src="images/cupcake_cocholate.jpg" alt="Cupcake Chocolate">
+        <h3>Cupcake Chocolate</h3>
+        <p>Cupcake coklat dengan hiasan coklat premium.</p>
+        <p>Harga: Rp 18.000</p>
+        <button onclick="tambahKeranjang('Cupcake Chocolate',18000)">Keranjang</button>
+        <button onclick="beliProduk('Cupcake Chocolate',18000)">Beli</button>
+      </div>
+
+      <!-- Cupcake Mix -->
+      <div class="produk-card">
+        <img src="images/cupcake_mix.jpg" alt="Cupcake Mix">
+        <h3>Cupcake Mix</h3>
+        <p>Berbagai rasa cupcake dalam satu box.</p>
+        <p>Harga: Rp 22.000</p>
+        <button onclick="tambahKeranjang('Cupcake Mix',22000)">Keranjang</button>
+        <button onclick="beliProduk('Cupcake Mix',22000)">Beli</button>
+      </div>
+
+      <!-- Cupcake Strawberry -->
+      <div class="produk-card">
+        <img src="images/cupcake_strawberry.jpg" alt="Cupcake Strawberry">
+        <h3>Cupcake Strawberry</h3>
+        <p>Cupcake segar dengan topping stroberi.</p>
+        <p>Harga: Rp 20.000</p>
+        <button onclick="tambahKeranjang('Cupcake Strawberry',20000)">Keranjang</button>
+        <button onclick="beliProduk('Cupcake Strawberry',20000)">Beli</button>
+      </div>
+
+      <!-- Macaroon -->
+      <div class="produk-card">
+        <img src="images/makaroon.jpg" alt="Macaroon">
+        <h3>Macaroon</h3>
+        <p>Kue manis berwarna-warni dengan rasa lembut.</p>
+        <p>Harga: Rp 15.000</p>
+        <button onclick="tambahKeranjang('Macaroon',15000)">Keranjang</button>
+        <button onclick="beliProduk('Macaroon',15000)">Beli</button>
+      </div>
+
+      <!-- Mochi Cat -->
+      <div class="produk-card">
+        <img src="images/mochi_cat.jpg" alt="Mochi Cat">
+        <h3>Mochi Cat</h3>
+        <p>Mochi lucu berbentuk kucing.</p>
+        <p>Harga: Rp 17.000</p>
+        <button onclick="tambahKeranjang('Mochi Cat',17000)">Keranjang</button>
+        <button onclick="beliProduk('Mochi Cat',17000)">Beli</button>
+      </div>
+
+      <!-- Mochi Flower -->
+      <div class="produk-card">
+        <img src="images/mochi_flawer.jpg" alt="Mochi Flower">
+        <h3>Mochi Flower</h3>
+        <p>Mochi cantik berbentuk bunga.</p>
+        <p>Harga: Rp 17.000</p>
+        <button onclick="tambahKeranjang('Mochi Flower',17000)">Keranjang</button>
+        <button onclick="beliProduk('Mochi Flower',17000)">Beli</button>
+      </div>
+
+      <!-- Mochi Panda -->
+      <div class="produk-card">
+        <img src="images/mochi_panda.jpg" alt="Mochi Panda">
+        <h3>Mochi Panda</h3>
+        <p>Mochi imut berbentuk panda.</p>
+        <p>Harga: Rp 17.000</p>
+        <button onclick="tambahKeranjang('Mochi Panda',17000)">Keranjang</button>
+        <button onclick="beliProduk('Mochi Panda',17000)">Beli</button>
+      </div>
+
+      <!-- Strawberry Choco -->
+      <div class="produk-card">
+        <img src="images/stawberry_choco.jpg" alt="Strawberry Choco">
+        <h3>Strawberry Choco</h3>
+        <p>Stroberi segar dilapisi coklat.</p>
+        <p>Harga: Rp 25.000</p>
+        <button onclick="tambahKeranjang('Strawberry Choco',25000)">Keranjang</button>
+        <button onclick="beliProduk('Strawberry Choco',25000)">Beli</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/keranjang.js"></script>
+</body>
+</html>

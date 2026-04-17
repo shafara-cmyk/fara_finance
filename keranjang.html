@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keranjang</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+  <header class="dashboard-header">
+    <h1>Keranjang Belanja</h1>
+    <nav>
+      <ul>
+        <li><a href="dashboard_user.html">Dasbor</a></li>
+        <li><a href="keranjang.html">Keranjang 🛒</a></li>
+        <li><a href="login.html">Keluar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <table id="tabelKeranjang">
+      <thead>
+        <tr>
+          <th>Nama Produk</th>
+          <th>Harga</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script>
+    let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+    let tbody = document.querySelector("#tabelKeranjang tbody");
+
+    keranjang.forEach(item => {
+      let row = document.createElement("tr");
+      // kalau mau tampilkan gambar, simpan nama file di item.image
+      row.innerHTML = `
+        <td>${item.nama}</td>
+        <td>Rp ${item.harga}</td>
+        <td><img src="images/${item.nama.toLowerCase().replace(/ /g,'_')}.jpg" 
+                 alt="${item.nama}" style="width:80px;height:80px;object-fit:cover;"></td>
+      `;
+      tbody.appendChild(row);
+    });
+  </script>
+</body>
+</html>
