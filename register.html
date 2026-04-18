@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>fara_finance - Registrasi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .register-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a5acd, #ff69b4, #1e90ff);
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    .register-container {
+      background-color: #ffffff;
+      color: #333;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 320px;
+      text-align: center;
+    }
+    .register-container h2 {
+      color: #6a5acd;
+      margin-bottom: 20px;
+    }
+    .register-container label {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+      font-weight: bold;
+      color: #1e90ff;
+    }
+    .register-container input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .register-container button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .register-container button:hover {
+      background-color: #6a5acd;
+    }
+  </style>
+</head>
+<body class="register-body">
+  <div class="register-container">
+    <h2>Registrasi </h2>
+    <form id="registerForm">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" required>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="password">Kata sandi</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      localStorage.setItem("nama", document.getElementById("nama").value);
+      localStorage.setItem("username", document.getElementById("username").value);
+      localStorage.setItem("email", document.getElementById("email").value);
+      localStorage.setItem("password", document.getElementById("password").value);
+
+      alert("Registrasi berhasil! Silakan login.");
+      window.location.href = "login.html"; // nyambung ke login awal yang sudah kamu buat
+    });
+  </script>
+</body>
+</html>
